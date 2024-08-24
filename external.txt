@@ -1,10 +1,7 @@
 pritunl.com
-terraform.io
 setapp.com
 apphousekitchen.com
 paddle.com
-kino.pub
-chatgpt.com
 ytimg.com
 google.com
 x.ai
