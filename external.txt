@@ -8,3 +8,4 @@ x.ai
 proxy.mob.maps.yandex.net
 googleusercontent.com
 knotding.com
+web.telegram.org
