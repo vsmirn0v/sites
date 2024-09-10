@@ -10,3 +10,4 @@ googleusercontent.com
 knotding.com
 web.telegram.org
 hetzner.com
+ios.chat.openai.com
