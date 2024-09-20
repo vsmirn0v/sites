@@ -1,2 +1,3 @@
 ios.chat.openai.com
 ya.ru
+2ip.ru
