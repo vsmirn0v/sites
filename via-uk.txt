@@ -1,1 +1,2 @@
 ios.chat.openai.com
+ya.ru
