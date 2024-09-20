@@ -1,1 +1,2 @@
 ios.chat.openai.com
+test.com
