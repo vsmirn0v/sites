@@ -1,2 +1,4 @@
 ios.chat.openai.com
 chatgpt.com
+auth0.openai.com
+auth.openai.com
