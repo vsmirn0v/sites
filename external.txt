@@ -12,3 +12,4 @@ web.telegram.org
 hetzner.com
 ios.chat.openai.com
 atv4.dnskp.cc
+clevelandclinic.org
