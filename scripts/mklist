@@ -32,5 +32,6 @@ systemctl daemon-reload
 systemctl restart wg-quick@wg1.service
 fi
 
+sleep 10
 cp -f /root/sites/scripts/* /usr/local/bin/
 chmod 755 /usr/local/bin/*
