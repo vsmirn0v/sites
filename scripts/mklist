@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+set -e
+set -o pipefail
+#set -x
+
+echo "[AutoProxy 0.2.9]" > /tmp/list.txt
+for domain in $(curl -q https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst 2> /dev/null); do echo "||${domain}"  >> /tmp/list.txt; done
+
+echo "||xvideos-cdn.com" >> /tmp/list.txt
+
+git -C /root/sites/ pull -f
+for domain in $(cat /root/sites/external.txt); do echo "||${domain}"  >> /tmp/list.txt; done
+
+
+cat /tmp/list.txt |sort|uniq|base64  > /var/www/vpn.apt99.ru/html/list.txt
+
+
+rm -f /tmp/via-uk-ips.txt || true
+echo -n "AllowedIPs = " > /tmp/via-uk-ips.txt
+for domain in $(cat /root/sites/via-uk.txt); do
+getent ahostsv4 $domain|grep STREAM|sort|uniq|sed -e 's/ *.STREAM.*/\/32, /g'|tr -d '\n' >> /tmp/via-uk-ips.txt
+done
+truncate -s-2 /tmp/via-uk-ips.txt
+
+WG1_OLD_MD5=($(md5sum /etc/wireguard/wg1.conf))
+sed -i '/AllowedIPs/d' /etc/wireguard/wg1.conf
+cat /tmp/via-uk-ips.txt >> /etc/wireguard/wg1.conf
+WG1_NEW_MD5=($(md5sum /etc/wireguard/wg1.conf))
+
+if [ "$WG1_NEW_MD5" != "$WG1_OLD_MD5" ]; then
+systemctl daemon-reload
+systemctl restart wg-quick@wg1.service
+fi
+
+cp -f /root/sites/scripts/* /usr/local/bin/
+chmod 755 /usr/local/bin/*

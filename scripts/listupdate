@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+sleep 10
+CKTIME=$(date  "+%H:%M" -d "-1 minute")
+
+egrep "$CKTIME.*update.*GitHub" /var/log/nginx/access.log && (echo Webhook detected, updating list.txt; /usr/local/bin/mklist) || true
