@@ -90,9 +90,14 @@ def save_cache(cache):
         if isinstance(timestamp, datetime):
             timestamp = timestamp.isoformat()
 
-        # Также проверяем, что latest_timestamp в data тоже в строке
+       # Также проверяем, что latest_timestamp в data тоже в строке
         if isinstance(data["latest_timestamp"], datetime):
             data["latest_timestamp"] = data["latest_timestamp"].isoformat()
+
+        try:
+            timestamp = data["latest_timestamp"]
+        except:
+            pass
 
         serializable_cache[ip] = (data, timestamp)
 
@@ -107,7 +112,13 @@ def get_ip_info(ip, cache):
     if ip in cache:
         cached_data, timestamp = cache[ip]
         if current_time - timestamp < CACHE_EXPIRATION:
-            return cached_data
+            intervals, latest_timestamp = group_timestamps(ip_time_dict[ip])
+            cached_data["count"] = len(ip_time_dict[ip])
+            cached_data["intervals"] = intervals
+            cached_data["latest_timestamp"] = latest_timestamp
+            cache[ip] = (ret_data, latest_timestamp)
+            save_cache(cache)
+            return ret_data
 
     # Запрос к сервису ipwhois.app, если данных нет в кеше или они устарели
     try:
@@ -131,7 +142,7 @@ def get_ip_info(ip, cache):
         }
 
         # Обновляем кеш и сохраняем его в файл
-        cache[ip] = (ip_data, current_time)
+        cache[ip] = (ip_data, latest_timestamp)
         save_cache(cache)
         return ip_data
 
@@ -264,4 +275,4 @@ html_content += """
 print(html_content)
 
 # Сохранение кеша перед завершением работы программы
-save_cache(cache)
+#save_cache(cache)
