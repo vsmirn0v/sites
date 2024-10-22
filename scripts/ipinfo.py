@@ -252,16 +252,17 @@ html_content = f"""
 
 # Заполняем таблицу данными IP-адресов
 for info in ip_info_list:
-    html_content += f"""
-    <tr>
-        <td>{info['ip']}</td>
-        <td>{info['count']}</td>
-        <td>{info['city']}</td>
-        <td><img src="{info['flag_url']}" alt="{info['country']}" /> {info['country']}</td>
-        <td>{info['provider']}</td>
-        <td>{info['intervals']}</td>
-    </tr>
-    """
+    if info['count'] > 4:
+        html_content += f"""
+        <tr>
+            <td>{info['ip']}</td>
+            <td>{info['count']}</td>
+            <td>{info['city']}</td>
+            <td><img src="{info['flag_url']}" alt="{info['country']}" /> {info['country']}</td>
+            <td>{info['provider']}</td>
+            <td>{info['intervals']}</td>
+        </tr>
+        """
 
 # Завершаем HTML-контент
 html_content += """
