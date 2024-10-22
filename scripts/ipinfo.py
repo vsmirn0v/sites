@@ -116,9 +116,9 @@ def get_ip_info(ip, cache):
             cached_data["count"] = len(ip_time_dict[ip])
             cached_data["intervals"] = intervals
             cached_data["latest_timestamp"] = latest_timestamp
-            cache[ip] = (ret_data, latest_timestamp)
+            cache[ip] = (cached_data, latest_timestamp)
             save_cache(cache)
-            return ret_data
+            return cached_data
 
     # Запрос к сервису ipwhois.app, если данных нет в кеше или они устарели
     try:
