@@ -14,10 +14,18 @@ free_mem=$(awk '/MemAvailable/ {print $2}' /proc/meminfo)
 # Calculate memory utilization as a percentage
 memory_utilization=$(( (total_mem - free_mem) * 100 / total_mem ))
 
+# Get current timestamp
+timestamp=$(date "+%Y-%m-%d %H:%M:%S")
+
 # Check conditions and restart xray if either threshold is exceeded
 if (( $(echo "$load_avg > $LOAD_THRESHOLD" | bc -l) )) || (( memory_utilization > MEMORY_THRESHOLD )); then
-    echo "Load or memory utilization threshold exceeded. Restarting xray..."
+    echo "$timestamp - Load or memory utilization threshold exceeded. Restarting xray..." >> /tmp/stabilize.log
     systemctl restart xray
 else
-    echo "System load and memory utilization are within safe limits."
+    echo "$timestamp - System load and memory utilization are within safe limits." >> /tmp/stabilize.log
+fi
+
+if [[ $(cat /tmp/stabilize.log |wc -l) -gt 2000 ]]; then
+  tail -2000 /tmp/stabilize.log > /tmp/stabilize.log.new
+  mv /tmp/stabilize.log.new /tmp/stabilize.log
 fi
