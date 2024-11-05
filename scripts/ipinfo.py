@@ -1,4 +1,6 @@
 import sys
+import psutil
+import os
 import re
 import requests
 import time
@@ -20,9 +22,26 @@ data = sys.stdin.read()
 date_limit = datetime.now() - timedelta(days=2)
 recent_limit = datetime.now() - timedelta(hours=2)
 
+def get_load_average():
+    # Get the load averages for the past 1, 5, and 15 minutes
+    load_avg = os.getloadavg()
+    return {
+        "1_min": load_avg[0],
+        "5_min": load_avg[1],
+        "15_min": load_avg[2]
+    }
+
+def get_memory_utilization():
+    # Get memory usage details
+    memory_info = psutil.virtual_memory()
+    memory_utilization = memory_info.percent
+    return memory_utilization
+
 # Словарь для хранения IP-адресов и их временных меток
 ip_time_dict = defaultdict(list)
 total_lines_processed = 0
+load_avg = get_load_average()
+memory_utilization = get_memory_utilization()
 
 # Фильтрация строк по дате, извлечение IP-адресов и их временных меток
 for line in data.strip().split('\n'):
@@ -41,6 +60,7 @@ for line in data.strip().split('\n'):
 if not ip_time_dict:
     print("Нет данных для анализа в пределах последних двух суток.")
     sys.exit(0)
+
 
 # Функция для объединения временных меток по 10-минутным интервалам и отметки последних двух часов
 def group_timestamps(timestamps):
@@ -238,7 +258,7 @@ html_content = f"""
 <body>
 <div class="container">
 <h2>IP Address Analysis (Last 2 Days)</h2>
-<p>Report generated on: {current_time} (GMT+3) | Total lines processed: {total_lines_processed} | Time taken: {elapsed_time:.2f} seconds</p>
+<p>Report generated on: {current_time} (GMT+3) | Total lines processed: {total_lines_processed} | Load avg: {load_avg['1_min']} {load_avg['5_min']} {load_avg['15_min']} | Mem used: {memory_utilization}% | Time taken: {elapsed_time:.2f} seconds</p>
 <table>
     <tr>
         <th>IP Address</th>
