@@ -26,9 +26,9 @@ def get_load_average():
     # Get the load averages for the past 1, 5, and 15 minutes
     load_avg = os.getloadavg()
     return {
-        "1_min": load_avg[0],
-        "5_min": load_avg[1],
-        "15_min": load_avg[2]
+        "1_min": round(load_avg[0], 2),
+        "5_min": round(load_avg[1], 2),
+        "15_min": round(load_avg[2], 2)
     }
 
 def get_memory_utilization():
@@ -272,7 +272,7 @@ html_content = f"""
 <body>
 <div class="container">
 <h2>IP Address Analysis (Last 2 Days)</h2>
-<p>{current_time} | Load avg: {load_avg['1_min']} {load_avg['5_min']} {load_avg['15_min']} | RAM used: {memory_utilization}% | Established connections: {network_connections['established']} | Waiting connections: {network_connections['non_established']} | Time taken: {elapsed_time:.2f} seconds</p>
+<p>{current_time} | LA {load_avg['1_min']} {load_avg['5_min']} {load_avg['15_min']} | RAM use {memory_utilization}% | Established connections {network_connections['established']}, waiting: {network_connections['non_established']} | Time taken: {elapsed_time:.2f} seconds</p>
 <table>
     <tr>
         <th>IP Address</th>
