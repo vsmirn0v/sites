@@ -22,7 +22,7 @@ if (( $(echo "$load_avg > $LOAD_THRESHOLD" | bc -l) )) || (( memory_utilization 
     echo "$timestamp - Load or memory utilization threshold exceeded. Restarting xray..." >> /tmp/stabilize.log
     systemctl restart xray
 else
-    echo "$timestamp - System load and memory utilization are within safe limits." >> /tmp/stabilize.log
+    echo "$timestamp - System load and memory utilization are within safe limits." # >> /tmp/stabilize.log
 fi
 
 if [[ $(cat /tmp/stabilize.log |wc -l) -gt 2000 ]]; then

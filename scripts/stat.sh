@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [[ $(cat /tmp/vpnlog.txt |wc -l) -gt 2000 ]]; then
+if [[ $(cat /tmp/vpnlog.txt |wc -l) -gt 4000 ]]; then
   tail -2000 /tmp/vpnlog.txt > /tmp/vpnlog.txt.new
   mv /tmp/vpnlog.txt.new /tmp/vpnlog.txt
 fi
