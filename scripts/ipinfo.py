@@ -282,7 +282,7 @@ html_content = f"""
 <body>
 <div class="container">
 <h2>IP Address Analysis (Last 3 Days)</h2>
-<p>{current_time} LA: {load_avg['1_min']} {load_avg['5_min']} {load_avg['15_min']} RAM: {memory_utilization}% | xray uptime: {xray_uptime} | Established connections {network_connections['established']}, waiting: {network_connections['non_established']} | Time taken to generate: {elapsed_time:.2f} seconds</p>
+<p>{current_time} LA: <b>{load_avg['1_min']}</b> {load_avg['5_min']} {load_avg['15_min']} RAM: <b>{memory_utilization}%</b> xray uptime: <b>{xray_uptime}</b> connections: <b>{network_connections['established']}</b> waiting: {network_connections['non_established']} generated in {elapsed_time:.2f} seconds</p>
 <table>
     <tr>
         <th>IP Address</th>
