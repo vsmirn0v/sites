@@ -22,6 +22,15 @@ data = sys.stdin.read()
 date_limit = datetime.now() - timedelta(days=2)
 recent_limit = datetime.now() - timedelta(hours=2)
 
+def get_xray_uptime():
+    # Find the xray process and calculate the time since it started
+    for process in psutil.process_iter(['name', 'create_time']):
+        if process.info['name'] == 'xray':
+            start_time = datetime.fromtimestamp(process.info['create_time'])
+            uptime = datetime.now() - start_time
+            return str(uptime).split('.')[0]  # Remove microseconds for cleaner output
+    return "Xray process not running."
+
 def get_load_average():
     # Get the load averages for the past 1, 5, and 15 minutes
     load_avg = os.getloadavg()
@@ -56,6 +65,7 @@ total_lines_processed = 0
 load_avg = get_load_average()
 memory_utilization = get_memory_utilization()
 network_connections = get_network_connections()
+xray_uptime = get_xray_uptime()
 
 # Фильтрация строк по дате, извлечение IP-адресов и их временных меток
 for line in data.strip().split('\n'):
@@ -272,7 +282,7 @@ html_content = f"""
 <body>
 <div class="container">
 <h2>IP Address Analysis (Last 2 Days)</h2>
-<p>{current_time} | LA {load_avg['1_min']} {load_avg['5_min']} {load_avg['15_min']} | RAM use {memory_utilization}% | Established connections {network_connections['established']}, waiting: {network_connections['non_established']} | Time taken: {elapsed_time:.2f} seconds</p>
+<p>{current_time} {load_avg['1_min']} {load_avg['5_min']} {load_avg['15_min']} RAM: {memory_utilization}% | xray uptime: {xray_uptime} | Established connections {network_connections['established']}, waiting: {network_connections['non_established']} | Time taken to generate: {elapsed_time:.2f} seconds</p>
 <table>
     <tr>
         <th>IP Address</th>
