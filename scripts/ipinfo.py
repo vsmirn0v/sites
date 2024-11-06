@@ -27,6 +27,7 @@ def get_xray_uptime():
     for process in psutil.process_iter(['name', 'create_time']):
         if process.info['name'] == 'xray':
             start_time = datetime.fromtimestamp(process.info['create_time'])
+            uptime = datetime.now() - start_time
             uptime_hours = uptime.total_seconds() / 3600  # Convert seconds to hours
             return round(uptime_hours, 2)  # Round to 2 decimal places
     return "Xray process not running."
