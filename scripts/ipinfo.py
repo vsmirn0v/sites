@@ -19,7 +19,7 @@ start_time = time.time()
 data = sys.stdin.read()
 
 # Установка границы для фильтрации по дате (два дня назад)
-date_limit = datetime.now() - timedelta(days=3)
+date_limit = datetime.now() - timedelta(days=2)
 recent_limit = datetime.now() - timedelta(hours=2)
 
 def get_xray_uptime():
@@ -283,7 +283,7 @@ html_content = f"""
 </head>
 <body>
 <div class="container">
-<h2>IP Address Analysis (Last 3 Days)</h2>
+<h2>IP Address Analysis (Last 2 Days)</h2>
 <p>{current_time} LA: <b>{load_avg['1_min']}</b> {load_avg['5_min']} {load_avg['15_min']} RAM: <b>{memory_utilization}%</b> xray uptime: <b>{xray_uptime}</b> connections: <b>{network_connections['established']}</b> waiting: {network_connections['non_established']} generated in {elapsed_time:.2f} seconds</p>
 <table>
     <tr>
