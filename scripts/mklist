@@ -15,16 +15,16 @@ for domain in $(cat /root/sites/external.txt); do echo "||${domain}"  >> /tmp/li
 cat /tmp/list.txt |sort|uniq|base64  > /var/www/vpn.apt99.ru/html/list.txt
 
 
-rm -f /tmp/via-uk-ips.txt || true
-echo -n "AllowedIPs = " > /tmp/via-uk-ips.txt
-for domain in $(cat /root/sites/via-uk.txt); do
-getent ahostsv4 $domain|grep STREAM|sort|uniq|sed -e 's/ *.STREAM.*/\/32, /g'|tr -d '\n' >> /tmp/via-uk-ips.txt
+rm -f /tmp/via-wg1-ips.txt || true
+echo -n "AllowedIPs = " > /tmp/via-wg1-ips.txt
+for domain in $(cat /root/sites/via-wg1.txt); do
+getent ahostsv4 $domain|grep STREAM|sort|uniq|sed -e 's/ *.STREAM.*/\/32, /g'|tr -d '\n' >> /tmp/via-wg1-ips.txt
 done
-truncate -s-2 /tmp/via-uk-ips.txt
+truncate -s-2 /tmp/via-wg1-ips.txt
 
 WG1_OLD_MD5=($(md5sum /etc/wireguard/wg1.conf))
 sed -i '/AllowedIPs/d' /etc/wireguard/wg1.conf
-cat /tmp/via-uk-ips.txt >> /etc/wireguard/wg1.conf
+cat /tmp/via-wg1-ips.txt >> /etc/wireguard/wg1.conf
 WG1_NEW_MD5=($(md5sum /etc/wireguard/wg1.conf))
 
 if [ "$WG1_NEW_MD5" != "$WG1_OLD_MD5" ]; then
