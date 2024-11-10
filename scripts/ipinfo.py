@@ -298,7 +298,7 @@ html_content = f"""
 
 # Заполняем таблицу данными IP-адресов
 for info in ip_info_list:
-    if info['count'] > 4:
+    if info['count'] > 8:
         html_content += f"""
         <tr>
             <td>{info['ip']}</td>
