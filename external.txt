@@ -11,6 +11,8 @@ knotding.com
 telegram.org
 hetzner.com
 openai.com
+chat.com
+chatgpt.com
 dnskp.cc
 clevelandclinic.org
 replacements.com
