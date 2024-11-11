@@ -24,3 +24,4 @@ bosch-home.com
 reddit.com
 veritone.com
 machinebox.io
+ghcr.io
