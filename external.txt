@@ -31,3 +31,4 @@ hcf-bshg.com
 dubaipolice.gov.ae
 pigugroup.eu
 googleadservices.com
+staticdn.site
