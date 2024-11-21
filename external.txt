@@ -33,3 +33,4 @@ pigugroup.eu
 googleadservices.com
 staticdn.site
 airbnb.com
+airbnb.ru
