@@ -5,7 +5,7 @@ paddle.com
 ytimg.com
 google.com
 x.ai
-yandex.net
+appmetrica.yandex.net
 googleusercontent.com
 knotding.com
 telegram.org
