@@ -36,3 +36,4 @@ airbnb.com
 airbnb.ru
 iherb.com
 kmail-lists.com
+bitinfocharts.com
