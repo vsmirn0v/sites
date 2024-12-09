@@ -39,3 +39,4 @@ kmail-lists.com
 bitinfocharts.com
 vpnjantit.com
 kas.fyi
+lisalab.io
