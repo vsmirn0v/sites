@@ -33,8 +33,9 @@ pigugroup.eu
 googleadservices.com
 staticdn.site
 airbnb.com
-Ωairbnb.ru
+airbnb.ru
 iherb.com
 kmail-lists.com
 bitinfocharts.com
 vpnjantit.com
+kas.fyi
