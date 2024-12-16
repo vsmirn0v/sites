@@ -42,3 +42,4 @@ kas.fyi
 lisalab.io
 opengpu.network
 goatcoin.net
+tapbit.com
