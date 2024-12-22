@@ -43,4 +43,5 @@ lisalab.io
 opengpu.network
 goatcoin.net
 tapbit.com
-telegraph.co.uk
+.uk
+taostats.io
