@@ -45,3 +45,4 @@ goatcoin.net
 tapbit.com
 .uk
 taostats.io
+bitrefill.com
