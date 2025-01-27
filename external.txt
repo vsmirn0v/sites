@@ -50,4 +50,4 @@ ikea.com
 vmware.com
 broadcom.com
 independentreserve.com
-knsdomains.com
+knsdomains.org
