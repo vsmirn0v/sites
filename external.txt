@@ -52,3 +52,4 @@ broadcom.com
 independentreserve.com
 knsdomains.org
 citrix.com
+cloud.com
