@@ -53,4 +53,5 @@ independentreserve.com
 knsdomains.org
 citrix.com
 cloud.com
-twimg.com
+video.twimg.com
+video.twimg.com.cdn.cloudflare.net
