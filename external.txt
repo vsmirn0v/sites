@@ -11,7 +11,6 @@ knotding.com
 telegram.org
 hetzner.com
 openai.com
-auth.openai.com
 chat.com
 chatgpt.com
 dnskp.cc
@@ -55,4 +54,5 @@ knsdomains.org
 citrix.com
 cloud.com
 video.twimg.com
-video.twimg.com.cdn.cloudflare.net
+twimg.com.cdn.cloudflare.net
+openai.com.cdn.cloudflare.net
