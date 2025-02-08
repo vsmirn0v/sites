@@ -58,3 +58,4 @@ twimg.com.cdn.cloudflare.net
 openai.com.cdn.cloudflare.net
 video.twimg.com.cdn.cloudflare.net
 auth.openai.com.cdn.cloudflare.net
+construct.net
