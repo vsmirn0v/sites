@@ -11,6 +11,7 @@ knotding.com
 telegram.org
 hetzner.com
 openai.com
+auth.openai.com
 chat.com
 chatgpt.com
 dnskp.cc
