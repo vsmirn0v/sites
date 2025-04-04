@@ -61,6 +61,7 @@ video.twimg.com.cdn.cloudflare.net
 auth.openai.com.cdn.cloudflare.net
 construct.net
 editor.construct.net
+sora.com
 cdn-website.com
 netatmo.com
 bitinfocharts.com
