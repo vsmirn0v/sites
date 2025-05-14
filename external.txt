@@ -66,3 +66,4 @@ cdn-website.com
 netatmo.com
 bitinfocharts.com
 bitcointalk.org
+lseg.com
