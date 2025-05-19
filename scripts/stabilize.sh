@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Thresholds
-LOAD_THRESHOLD=0.9
-MEMORY_THRESHOLD=90
+LOAD_THRESHOLD=0.8
+MEMORY_THRESHOLD=70
 
 # Get load average for the last 5 minutes
 load_avg=$(awk '{print $2}' /proc/loadavg)
