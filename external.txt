@@ -68,3 +68,4 @@ bitinfocharts.com
 bitcointalk.org
 lseg.com
 ios.chat.openai.com
+linkedin.com
