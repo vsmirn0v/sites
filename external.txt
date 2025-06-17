@@ -70,3 +70,5 @@ lseg.com
 ios.chat.openai.com
 linkedin.com
 kaspa.com
+magicjohn.com
+oceanpayment.com
