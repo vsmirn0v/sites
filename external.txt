@@ -73,3 +73,5 @@ kaspa.com
 magicjohn.com
 oceanpayment.com
 swarovski.com
+amazon.com
+jomashop.com
