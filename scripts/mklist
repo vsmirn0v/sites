@@ -29,7 +29,7 @@ WG1_NEW_MD5=($(md5sum /etc/wireguard/wg1.conf))
 
 if [ "$WG1_NEW_MD5" != "$WG1_OLD_MD5" ]; then
 systemctl daemon-reload
-systemctl restart wg-quick@wg1.service
+systemctl status wg-quick@wg1.service
 fi
 
 sleep 10
