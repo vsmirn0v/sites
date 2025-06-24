@@ -73,5 +73,6 @@ kaspa.com
 magicjohn.com
 oceanpayment.com
 swarovski.com
+prodregistryv2.org
 amazon.com
 jomashop.com
