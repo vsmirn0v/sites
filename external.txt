@@ -76,3 +76,4 @@ swarovski.com
 prodregistryv2.org
 amazon.com
 jomashop.com
+auth.openai.com
