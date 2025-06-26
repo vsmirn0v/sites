@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-egrep_pattern=$(hostname -I | tr ' ' '\n' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | awk '{print $0 ":443"}' | paste -sd'|' -)
+egrep_pattern=$(hostname -I | tr ' ' '\n' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | awk '{print $0 ":443 "}' | paste -sd'|' -)
 
 if [[ $(cat /tmp/vpnlog.txt |wc -l) -gt 4000 ]]; then
   tail -2000 /tmp/vpnlog.txt > /tmp/vpnlog.txt.new
