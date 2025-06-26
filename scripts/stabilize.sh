@@ -20,6 +20,7 @@ timestamp=$(date "+%Y-%m-%d %H:%M:%S")
 # Check conditions and restart xray if either threshold is exceeded
 if (( $(echo "$load_avg > $LOAD_THRESHOLD" | bc -l) )) || (( memory_utilization > MEMORY_THRESHOLD )); then
     echo "$timestamp - Load or memory utilization threshold exceeded. Restarting xray..." >> /tmp/stabilize.log
+    echo "$timestamp - LA: $load_avg MU: $memory_utilization" >> /tmp/stabilize.log
     systemctl restart xray
 else
     echo "$timestamp - System load and memory utilization are within safe limits." # >> /tmp/stabilize.log
