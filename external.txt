@@ -89,3 +89,4 @@ massimodutti.com
 barracuda.com
 easydmarc.com
 securityscorecard.com
+senderscore.org
