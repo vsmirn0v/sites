@@ -1,4 +1,4 @@
-linkedinmobileapp.com
+mlinkedinmobileapp.com
 pritunl.com
 setapp.com
 apphousekitchen.com
@@ -85,7 +85,6 @@ akamai.com
 justanswer.com
 docsend.com
 openwrt.org
-massimodutti.com
 barracuda.com
 easydmarc.com
 securityscorecard.com
