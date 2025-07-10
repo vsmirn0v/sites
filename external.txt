@@ -1,4 +1,4 @@
-mlinkedinmobileapp.com
+linkedinmobileapp.com
 pritunl.com
 setapp.com
 apphousekitchen.com
@@ -92,3 +92,4 @@ senderscore.org
 emailbasura.org
 forex.com
 ice.com
+theice.com
