@@ -95,3 +95,5 @@ ice.com
 theice.com
 finanzen.net
 paack.app
+blockstream.info
+btc.com
