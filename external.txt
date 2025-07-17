@@ -96,6 +96,7 @@ theice.com
 finanzen.net
 paack.app
 blockstream.info
+gemini.google.com
 btc.com
 correosexpress.com
 massimodutti.com
