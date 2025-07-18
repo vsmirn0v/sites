@@ -95,6 +95,7 @@ ice.com
 theice.com
 finanzen.net
 paack.app
+paack.co
 blockstream.info
 gemini.google.com
 btc.com
