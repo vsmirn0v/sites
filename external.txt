@@ -100,6 +100,7 @@ blockstream.info
 gemini.google.com
 btc.com
 snpedia.com
+promethease.com
 correosexpress.com
 massimodutti.com
 rm365.nl
