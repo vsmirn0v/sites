@@ -99,6 +99,7 @@ paack.co
 blockstream.info
 gemini.google.com
 btc.com
+fbcdn.net
 correosexpress.com
 massimodutti.com
 rm365.nl
