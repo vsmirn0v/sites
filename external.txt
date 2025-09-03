@@ -111,3 +111,4 @@ divers-supply.com
 opentofu.org
 browser-intake-datadoghq.com
 oaistatic.com
+cdn.oaistatic.com
