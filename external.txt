@@ -110,3 +110,4 @@ rm365.nl
 divers-supply.com
 opentofu.org
 browser-intake-datadoghq.com
+oaistatic.com
