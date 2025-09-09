@@ -113,3 +113,4 @@ browser-intake-datadoghq.com
 oaistatic.com
 cdn.oaistatic.com
 theins.ru
+kpdl.link
