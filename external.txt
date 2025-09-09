@@ -112,3 +112,4 @@ opentofu.org
 browser-intake-datadoghq.com
 oaistatic.com
 cdn.oaistatic.com
+theins.ru
