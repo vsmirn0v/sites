@@ -128,3 +128,4 @@ gsa.idms-apple.com.akadns.net
 smoot.apple.com
 smoot-searchv2-aeun1b.v.aaplimg.com
 apple-relay.mask.apple-dns.net
+apple-relay.apple.com
