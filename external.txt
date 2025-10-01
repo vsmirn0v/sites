@@ -120,7 +120,7 @@ lq-in-f154.1e100.net
 cdn32.lol
 99bitcoins.com
 gatekeeperconsent.com
-guzzoni-apple-com.v.aaplimg.com
+aaplimg.com
 guzzoni.apple.com
 apple-relay.cloudflare.com
 gsa.apple.com
