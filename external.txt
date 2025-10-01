@@ -120,10 +120,4 @@ lq-in-f154.1e100.net
 cdn32.lol
 99bitcoins.com
 gatekeeperconsent.com
-guzzoni.apple.com
-gsa.apple.com
-gsa.idms-apple.com.akadns.net
-smoot.apple.com
 guzzoni-apple-com.v.aaplimg.com
-smoot-searchv2-aeun1b.v.aaplimg.com
-apple-relay.mask.apple-dns.net
