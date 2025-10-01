@@ -132,3 +132,6 @@ apple-relay.apple.com
 api-glb-aeun1b.smoot.apple.com
 apple-relay.fastly-edge.com
 skadsdkless.appsflyersdk.com
+gateway.fe2.apple-dns.net
+gspe1-ssl.ls.apple.com
+gspe1-ssl.ls.apple.com.edgesuite.net
