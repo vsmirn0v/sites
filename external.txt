@@ -121,6 +121,7 @@ cdn32.lol
 99bitcoins.com
 gatekeeperconsent.com
 aaplimg.com
+guzzoni-apple-com.v.aaplimg.com
 guzzoni.apple.com
 apple-relay.cloudflare.com
 gsa.apple.com
