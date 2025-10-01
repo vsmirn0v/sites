@@ -129,6 +129,8 @@ gsa.idms-apple.com.akadns.net
 smoot.apple.com
 smoot-searchv2-aeun1b.v.aaplimg.com
 apple-relay.mask.apple-dns.net
+apple-dns.net
+mask-api.icloud.com
 apple-relay.apple.com
 api-glb-aeun1b.smoot.apple.com
 apple-relay.fastly-edge.com
