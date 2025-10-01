@@ -139,3 +139,5 @@ gateway.fe2.apple-dns.net
 gspe1-ssl.ls.apple.com
 gspe1-ssl.ls.apple.com.edgesuite.net
 gateway.icloud.com
+apple.com
+icloud.com
