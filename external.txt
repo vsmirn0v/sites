@@ -122,6 +122,7 @@ cdn32.lol
 gatekeeperconsent.com
 guzzoni-apple-com.v.aaplimg.com
 guzzoni.apple.com
+apple-relay.cloudflare.com
 gsa.apple.com
 gsa.idms-apple.com.akadns.net
 smoot.apple.com
