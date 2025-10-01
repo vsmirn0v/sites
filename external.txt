@@ -130,3 +130,4 @@ smoot-searchv2-aeun1b.v.aaplimg.com
 apple-relay.mask.apple-dns.net
 apple-relay.apple.com
 api-glb-aeun1b.smoot.apple.com
+apple-relay.fastly-edge.com
