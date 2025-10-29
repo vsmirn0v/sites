@@ -13,7 +13,11 @@ for domain in $(cat /root/sites/external.txt); do echo "||${domain}"  >> /tmp/li
 
 
 cat /tmp/list.txt |sort|uniq|base64  > /var/www/vpn.apt99.ru/html/list.txt
+rm -rf /tmp/data || true
+mkdir -p /tmp/data
+cat /root/sites/external.txt |sort|uniq > /tmp/data/gfw
 
+go run /root/domain-list-community --datapath=/tmp/data --outputdir /var/www/vpn.apt99.ru/html --outputname geosite.dat
 
 rm -f /tmp/via-wg1-ips.txt || true
 echo -n "AllowedIPs = " > /tmp/via-wg1-ips.txt
