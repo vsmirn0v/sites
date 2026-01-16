@@ -1,4 +1,4 @@
-com
+*.com^
 net
 ai
 org
