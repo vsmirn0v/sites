@@ -14,11 +14,11 @@ for domain in $(cat /root/sites/external.txt); do echo "${domain}"  >> /tmp/list
 echo "[AutoProxy 0.2.9]" > /tmp/list2.txt
 cat /tmp/list.txt | grep -v AutoProxy|sort|uniq >> /tmp/list2.txt
 cat /tmp/list2.txt |base64  > /var/www/vpn.apt99.ru/html/list.txt
-rm -rf /tmp/data || true
-mkdir -p /tmp/data
-cat /root/sites/external.txt |sort|uniq > /tmp/data/gfw
+# rm -rf /tmp/data || true
+# mkdir -p /tmp/data
+# cat /root/sites/external.txt |sort|uniq > /tmp/data/gfw
 
-#(cd /root/domain-list-community; go run ./ --datapath=/tmp/data --outputdir /var/www/vpn.apt99.ru/html --outputname geosite.dat)
+#cd /root/domain-list-community; go run ./ --datapath=/tmp/data --outputdir /var/www/vpn.apt99.ru/html --outputname geosite.dat)
 
 rm -f /tmp/via-wg1-ips.txt || true
 echo -n "AllowedIPs = " > /tmp/via-wg1-ips.txt
