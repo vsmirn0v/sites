@@ -4,7 +4,7 @@ set -o pipefail
 #set -x
 
 echo "[AutoProxy 0.2.9]" > /tmp/list.txt
-for domain in $(curl -q https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst 2> /dev/null); do echo "||${domain}"  >> /tmp/list.txt; done
+#for domain in $(curl -q https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst 2> /dev/null); do echo "||${domain}"  >> /tmp/list.txt; done
 
 echo "||xvideos-cdn.com" >> /tmp/list.txt
 
