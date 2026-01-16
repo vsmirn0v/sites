@@ -9,7 +9,7 @@ echo "[AutoProxy 0.2.9]" > /tmp/list.txt
 #echo "||xvideos-cdn.com" >> /tmp/list.txt
 
 git -C /root/sites/ pull -f
-for domain in $(cat /root/sites/external.txt); do echo "||${domain}"  >> /tmp/list.txt; done
+for domain in $(cat /root/sites/external.txt); do echo "${domain}"  >> /tmp/list.txt; done
 
 echo "[AutoProxy 0.2.9]" > /tmp/list2.txt
 cat /tmp/list.txt | grep -v AutoProxy|sort|uniq >> /tmp/list2.txt
